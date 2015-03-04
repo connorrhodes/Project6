@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project6</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="split_array">
+        <item>No</item>
+        <item>2 ways</item>
+        <item>3 ways</item>
+        <item>4 ways</item>
+        <item>5 ways</item>
+        <item>6 ways</item>
+        <item>7 ways</item>
+        <item>8 ways</item>
+        <item>9 ways</item>
+        <item>10 ways</item>
+    </string-array>
+</resources>

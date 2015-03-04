@@ -1,0 +1,328 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Amount"
+                    android:id="@+id/billAmountTextView"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/billAmountEditText"
+                    android:layout_column="1"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_weight=".75"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_span="3" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Percent"
+                    android:id="@+id/percentLabel"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%"
+                    android:id="@+id/percentTextView"
+                    android:layout_alignTop="@+id/tipLabel"
+                    android:layout_alignLeft="@+id/percentTextView"
+                    android:layout_alignStart="@+id/percentTextView"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_column="4" />
+                <SeekBar
+                    android:id="@+id/percentSeekBar"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:max="30"
+                    android:progress="15"
+                    android:indeterminate="false"
+                    android:layout_column="4"
+                    android:layout_weight=".15" />
+
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tip"
+                    android:id="@+id/tipLabel"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_weight=".1"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:id="@+id/tipTextView"
+                    android:layout_alignTop="@+id/tipLabel"
+                    android:layout_alignLeft="@+id/percentTextView"
+                    android:layout_alignStart="@+id/percentTextView"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_column="4" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:id="@+id/totalTextLabel"
+                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:layout_weight=".1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalTextView"
+                    android:layout_column="4"
+                    android:text="0.00"
+                    style="@style/Base.TextAppearance.AppCompat.Headline" />
+
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_below="@+id/totalLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                ></View>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_column="0">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rounding"
+                        android:id="@+id/roundingLabel"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@+id/totalRadioView"
+                        android:layout_alignBottom="@+id/totalRadioView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_column="0" />
+                    <RadioGroup
+                        android:id="@+id/roundingRadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/roundNoneRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="None"
+                            android:layout_marginLeft="40dp" />
+
+                        <RadioButton
+                            android:id="@+id/roundTipRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tip"
+                            android:checked="false"
+                            android:layout_marginLeft="40dp" />
+                        <RadioButton
+                            android:id="@+id/roundTotalRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:checked="false"
+                            android:layout_marginLeft="40dp" />
+
+                    </RadioGroup>
+
+
+
+                    <!--<RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/roundNoneRadioButton"
+                        android:checked="false"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_below="@+id/totalTextView"
+                        android:layout_toRightOf="@+id/totalRadioView"
+                        android:layout_toEndOf="@+id/totalRadioView"
+                        android:layout_column="1"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="None" />-->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <!--<RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/roundTipRadioButton"
+                        android:checked="false"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_above="@+id/totalRadioView"
+                        android:layout_toRightOf="@+id/percentTextView"
+                        android:layout_toEndOf="@+id/percentTextView"
+                        android:layout_column="1"
+                        android:layout_marginLeft="30dp"
+                        android:text="Tip" />-->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <!--<RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/roundTotalRadioButton"
+                        android:checked="false"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_above="@+id/totalRadioView"
+                        android:layout_toRightOf="@+id/percentTextView"
+                        android:layout_toEndOf="@+id/percentTextView"
+                        android:layout_column="1"
+                        android:layout_marginLeft="30dp"
+                        android:text="Total" />-->
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Split Bill?"
+                        android:id="@+id/splitLabel"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@+id/totalRadioView"
+                        android:layout_alignBottom="@+id/totalRadioView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_column="0" />
+                    <Spinner
+                        android:id="@+id/splitSpinner"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="17dp"
+                        android:spinnerMode="dropdown" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Per Person"
+                        android:id="@+id/perPersonLabel"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:textStyle="bold"
+                        android:layout_alignBaseline="@+id/totalRadioView"
+                        android:layout_alignBottom="@+id/totalRadioView"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_column="0" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/perPersonTextView"
+                        android:layout_column="1"
+                        android:text="0.00"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp" />
+
+
+                </TableRow>
+            </TableLayout>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
